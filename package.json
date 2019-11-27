@@ -1,0 +1,25 @@
+{
+  "name": "notifications",
+  "version": "1.0.0",
+  "description": "Drew's Google Magic",
+  "main": "Notification_App.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://865f898bcf64328c78e7bbe7272b7a09ae324b61@github.com/WanderingTrees/Notifications.git"
+  },
+  "author": "Drew Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WanderingTrees/Notifications/issues"
+  },
+  "homepage": "https://github.com/WanderingTrees/Notifications#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1"
+  },
+  "dependencies": {
+    "grunt-screeps": "^1.4.0"
+  }
+}

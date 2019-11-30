@@ -33,16 +33,16 @@ function towerDefence() {
 }
 
 function SpawnCreeps(harvesters, upgrader, builder, infantry, archer, mechanic, scout) {
-    if (harvesters.length < 8) {
+    if (harvesters.length < 5) {
         var newName = 'Harvester' + Game.time;
         console.log('Spawning new harvester: ' + newName);
-        Game.spawns['PIP'].spawnCreep([WORK, CARRY, MOVE], newName, {
+        Game.spawns['PIP'].spawnCreep([WORK, WORK, CARRY, MOVE], newName, {
             memory: {
                 role: 'harvester'
             }
         });
     }
-    if (upgrader.length < 2) {
+    if (upgrader.length < 1) {
         var newName = 'Upgrader' + Game.time;
         console.log('Spawning new Upgrader: ' + newName);
         Game.spawns['PIP'].spawnCreep([WORK, CARRY, MOVE], newName, {
@@ -68,17 +68,17 @@ function SpawnCreeps(harvesters, upgrader, builder, infantry, archer, mechanic, 
                 role: 'infantry'
             }
         });
-    }
+    }*/
     if (archer.length < 1) {
         var newName = 'archer' + Game.time;
         console.log('Spawning new archer: ' + newName);
-        Game.spawns['PIP'].spawnCreep([WORK, CARRY, MOVE], newName, {
+        Game.spawns['PIP'].spawnCreep([WORK, WORK, WORK, CARRY, CARRY, MOVE], newName, {
             memory: {
                 role: 'archer'
             }
         });
-    }*/
-    if (mechanic.length < 3) {
+    }
+    if (mechanic.length < 2) {
         var newName = 'mechanic' + Game.time;
         console.log('Spawning new mechanic: ' + newName);
         Game.spawns['PIP'].spawnCreep([WORK, CARRY, MOVE], newName, {
@@ -90,7 +90,7 @@ function SpawnCreeps(harvesters, upgrader, builder, infantry, archer, mechanic, 
     /*if (scout.length < 1) {
         var newName = 'Scout' + Game.time;
         console.log('Spawning new scout: ' + newName);
-        Game.spawns['PIP'].spawnCreep([CLAIM, MOVE], newName, {
+        Game.spawns['PIP'].spawnCreep([WORK, CARRY, MOVE, MOVE], newName, {
             memory: {
                 role: 'scout'
             }
@@ -157,3 +157,4 @@ module.exports.loop = function () {
     })
     console.log('Number of containers:' + Container.length);
 };
+

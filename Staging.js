@@ -71,6 +71,7 @@ var creepSetupsByRole = {
     },
 
 };
+
 function spawnCreeps(upgrader, builder, infantry, archer) {
     if (upgrader.length < creepSetupsByRole.upgrader.max) {
         var newName = 'Upgrader' + Game.time;
